@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K6ZB328E2W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K6ZB328E2W');
+</script>    
+    
+    <title>The Silence of Luz - The Owl House Hiatus Tracker</title>
+    <script type="text/javascript" src="script.js"></script>
+    <meta name="description" content="A site dedicated to keeping track of the ongoing hiatus of the Disney Channel show, The Owl House as well as keeping a list of its hiatuses of varying lengths and frequency." />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" href="favicon-32x32.ico" type="image/x-icon"/>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  
+  <body onload="createTable(hiatusList); requestSubredditData();">
+    <div class="count">
+      <h1>It has been</h1>
+      <h1 style="font-size:600%">
+      <span id="count">xxx</span></h1>
+      <h1>since "Young Blood, Old Souls" aired</h1>
+    </div>
+    <div class="tab">
+      <p style="font-size:150%">
+      <!--Note: The Owl House is currently not on hiatus.<br>-->
+      <a onclick=switchMode()> Click here <span id="moreorless">to count less precisely.</span></a>
+      </p>
+    <hr>
+    <div class="list">
+    <h1> The Grand List of Hiatuses </h1>
+    <table align="center" id="hiatus">
+    </table>
+    <br>
+    Also, it has been <span id="count3"></span> since <a id="hiatusLink" href=""> the Last Mention Of The Hiatus</a><br> on /r/TheOwlHouse.
+    </div>
+    <br>
+    <hr>
+  
+    <div class="countdowns">
+    <!--<h2>Time To Season 2 <br><a>""</h2></a>
+      <h1 style="font-size:250%">
+      <span id="count4">Unknown</span></h1>
+    <hr>
+  
+    -->
+      <h2>Time To Length of <span id="hiatusRank">nth</span> Longest Hiatus<br>(Currently Stands At <span id="nextHiatusLength">n</span> Days)</h2>
+      <h1 style="font-size:250%">
+      <span id="count2">Unknown</span></h1>
+    <hr>
+    </div>
+  </div>
+  <br><br>
+  </body>
+  </html>
+  

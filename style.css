@@ -1,0 +1,75 @@
+div{
+	font-family: "Andika";
+	text-align: center;
+	color: #ffbcde;
+    text-shadow: -2px 0 #000000, 0 1px #000000, 2px 0 #000000, 0 -1px #000000;
+	line-height: 1.4;
+	}
+	hr{
+	border: none;
+	background-color: #f850a1;
+	height: 5px;
+	width: 80%;
+	}
+	.extra{
+	text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+	letter-spacing: 1px;
+	}
+	.count {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	color: #f850a1;
+	text-shadow: -3px 0 #28313e, 0 3px #28313e, 3px 0 #28313e, 0 -3px #28313e;
+	letter-spacing: 3px;
+	}
+	.head {
+	font-size: 110%;
+	}
+	.tab {
+	position: relative;
+	transform: translate(0%, 110%);
+	font-size: 100%;
+	width: 100%;
+	height: 100%;
+	}	
+	body {
+	background-color: black;
+	background-image: url("BackgroundImage.png");
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 45% 50%;
+    }
+	table {
+    border-collapse: collapse;
+	color: #ffbcde;
+	width: 95%;
+	}
+	td {
+	padding: 3px;
+	text-align: center;
+	border: 3px solid #f850a1;
+	padding: 4px;
+	background-color: rgba(0,0,0,0.4);
+	}
+	a {
+    text-decoration: none;
+	color: #29b7ed;
+	text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+	}
+	a:visited {
+	color: #fbff21;
+	text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+	}
+	a:hover {
+	color: hotpink;
+	text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+	}
+	@font-face {
+    font-family: Andika;
+    src: url('AndikaNewBasic-Regular.ttf') format('truetype');
+   
+	}
