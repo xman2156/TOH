@@ -70,7 +70,7 @@ div{
 	}
 	@font-face {
     font-family: Andika;
-    src: url('AndikaNewBasic-Regular.ttf') format('truetype');
+    src: rel="preload" url('AndikaNewBasic-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 	}
