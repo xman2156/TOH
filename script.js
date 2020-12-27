@@ -1,6 +1,6 @@
 var oneDay = 24*60*60*1000;
 	var latestRelease = new Date("2020-08-29T19:00:00-05:00"); // Estimated End of Homeworld Bound
-	var nextRelease = new Date("2020-08-29T19:00:00-05:00"); // Next Episode release
+	// var nextRelease = new Date("2020-08-29T19:00:00-05:00"); // Next Episode release
 	var mode = 0; //DD:HH:MM:SS mode is default
 	var lastHiatusMention = null;
 	
