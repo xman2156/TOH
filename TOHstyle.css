@@ -1,3 +1,23 @@
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
 div{
 	font-family: "Andika";
 	text-align: center;
@@ -55,16 +75,16 @@ div{
 	padding: 4px;
 	background-color: rgba(0,0,0,0.4);
 	}
-	a {
-    text-decoration: none;
+	.links {
+  text-decoration: none;
 	color: #29b7ed;
 	text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 	}
-	a:visited {
+	.links:visited {
 	color: #fbff21;
 	text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 	}
-	a:hover {
+	.links:hover {
 	color: hotpink;
 	text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 	}
