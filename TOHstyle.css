@@ -1,38 +1,36 @@
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color:#333;
 }
-li {
+.topnav a {
   float: left;
-}
-li a {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
 }
-li a:hover {
-  background-color: #111;
+.topnav a:hover {
+  border-bottom: 3px solid #2ef8b5;
+}
+.topnav a.active {
+  border-bottom: 3px solid #2ef8b5;
 }
 div{
 	font-family: "Andika";
 	text-align: center;
-	color: #ffbcde;
-    text-shadow: -2px 0 #000000, 0 1px #000000, 2px 0 #000000, 0 -1px #000000;
+	color: #2ef8b5;
 	line-height: 1.4;
 	}
 	hr{
 	border: none;
-	background-color: #f850a1;
+	background-color: #2ef8b5;
 	height: 5px;
 	width: 80%;
 	}
 	.extra{
-	text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 	letter-spacing: 1px;
 	}
 	.count {
@@ -41,8 +39,7 @@ div{
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
-	color: #f850a1;
-	text-shadow: -3px 0 #28313e, 0 3px #28313e, 3px 0 #28313e, 0 -3px #28313e;
+	color: #2ef8b5;
 	letter-spacing: 3px;
 	}
 	.head {
@@ -57,36 +54,33 @@ div{
 	}	
 	body {
 	background-color: black;
-	background-image: url("TOHBackground.webp");
+	background-image: url("TOHBackground.jpg");
     background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: 46.8% 50%;
     }
 	table {
-    border-collapse: collapse;
-	color: #ffbcde;
+  border-collapse: collapse;
+	color: #27d49a;
 	width: 95%;
 	}
 	td {
 	padding: 3px;
 	text-align: center;
-	border: 3px solid #f850a1;
+	border: 3px solid #2ef8b5;
 	padding: 4px;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.6);
 	}
 	.links {
   text-decoration: none;
 	color: #29b7ed;
-	text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 	}
 	.links:visited {
 	color: #fbff21;
-	text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 	}
 	.links:hover {
-	color: hotpink;
-	text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+	color: #5bbdff;
 	}
 	@font-face {
     font-family: Andika;
