@@ -58,7 +58,7 @@ div{
     background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	background-position: 46.8% 50%;
+	background-position: center;
     }
 	table {
   border-collapse: collapse;
