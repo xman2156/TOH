@@ -72,10 +72,10 @@ div{
 	padding: 4px;
 	background-color: rgba(0,0,0,0.6);
 	}
-  a:hover {
-    color: rgb(51, 131, 223);
+  #changeCount:hover {
+    color: #7dcbff;
     cursor: pointer;
-    }
+  }
 	.links {
   text-decoration: none;
 	color: #29b7ed;
@@ -84,7 +84,8 @@ div{
 	color: #21ff6b;
 	}
 	.links:hover {
-	color: #5bbdff;
+	color: #7dcbff;
+  cursor: pointer;
 	}
 	@font-face {
     font-family: Andika;
