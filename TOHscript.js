@@ -159,7 +159,7 @@ var oneDay = 24*60*60*1000;
 	function createTable(array) {
 		var diffDays = timer("up", latestRelease, "count");
 		array[array.length - 1][5] = diffDays;
-	//	array[array.length - 1][6] = diffDays; 
+	//	array[array.length - 1][6] = diffDays; //Comment out when no new episode date. Subtract by days in dark
 		array[array.length - 1][7] = diffDays;
 		for(var i = 0; i < array.length ; i++){
 			var row = document.createElement('tr');
