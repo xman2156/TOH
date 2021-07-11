@@ -1,6 +1,6 @@
 var oneDay = 24*60*60*1000;
-	var latestRelease = new Date("2020-08-29T19:00:00-05:00"); // Estimated End of Homeworld Bound
-	// var nextRelease = new Date("2020-08-29T19:00:00-05:00"); // Next Episode release
+	var latestRelease = new Date("2021-07-10T10:00:00"); // Newest Epsiode Release
+	var nextRelease = new Date("2021-07-17T10:00:00"); // Next Episode release
 	var mode = 0; //DD:HH:MM:SS mode is default
 	var lastHiatusMention = null;
 	
@@ -114,13 +114,14 @@ var oneDay = 24*60*60*1000;
 	var hiatusList = [
 	['Last Episode','Next Episode','Preceding Release','Date Announced','Following Release','Days In The Dark','Days Waiting','Hiatus Length','Note'],
 	['Escape of the Palisman','Sense and Insensitivity','20 Mar 2020','7 Jul 2020','11 Jul 2020',111,4,115,''],
-	['Young Blood, Old Souls','','29 Aug 2020','','',114,0,114,''],
+	['Young Blood, Old Souls','Seperate Tides','29 Aug 2020','3 Jun 2021','12 Jun 2021',278,9,287,''],
+  ["Knock, Knock, Knockin' on Hooty's Door",'???','31 Jul 2021','???','???',,'N/A',,'This hiatus has not started yet.']
 	];
 	
 	function hiatusRankCheck(){
 		var diffDays = timer("up", latestRelease, "count");
         var hiatusRank = 0;
-        var nextHiatusLength = hiatusList[1][7]; //reference to the longest hiatus
+        var nextHiatusLength = hiatusList[2][7]; //reference to the longest hiatus
         for(var i = 1; i < hiatusList.length; i++){
             if(hiatusList[i][7] > diffDays){
 				hiatusRank += 1;
