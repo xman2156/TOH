@@ -2,6 +2,7 @@
   overflow: hidden;
   background-color:#333;
 }
+
 .topnav a {
   float: left;
   display: block;
@@ -12,28 +13,34 @@
   font-size: 17px;
   border-bottom: 3px solid transparent;
 }
+
 .topnav a:hover {
   border-bottom: 3px solid #2ef8b5;
 }
+
 .topnav a.active {
   border-bottom: 3px solid #2ef8b5;
 }
-div{
+
+div {
 	font-family: "Andika";
 	text-align: center;
 	color: #2ef8b5;
 	line-height: 1.4;
-	}
-	hr{
+}
+
+hr {
 	border: none;
 	background-color: #2ef8b5;
 	height: 5px;
 	width: 80%;
-	}
-	.extra{
+}
+
+.extra {
 	letter-spacing: 1px;
-	}
-	.count {
+}
+
+.count {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -41,52 +48,62 @@ div{
 	width: 90%;
 	color: #2ef8b5;
 	letter-spacing: 3px;
-	}
-	.head {
+}
+
+.head {
 	font-size: 110%;
-	}
-	.tab {
+}
+
+.tab {
 	position: relative;
 	transform: translate(0%, 110%);
 	font-size: 100%;
 	width: 100%;
 	height: 100%;
-	}	
-	body {
+}	
+
+body {
 	background-color: black;
 	background-image: url("TOHBackground.jpg");
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
-    }
-	table {
+}
+
+table {
   border-collapse: collapse;
 	color: #27d49a;
 	width: 95%;
-	}
-	td {
+}
+
+td {
 	padding: 3px;
 	text-align: center;
 	border: 3px solid #2ef8b5;
 	padding: 4px;
 	background-color: rgba(0,0,0,0.6);
-	}
-  #changeCount:hover {
-    color: #7dcbff;
-    cursor: pointer;
-  }
-	.links {
+}
+
+#changeCount:hover {
+  color: #7dcbff;
+  cursor: pointer;
+}
+
+.links {
   text-decoration: none;
 	color: #29b7ed;
-	}
-	.links:visited {
+}
+
+.links:visited {
 	color: #21ff6b;
-	}
-	.links:hover {
+}
+
+.links:hover {
 	color: #7dcbff;
   cursor: pointer;
-	}
+}
+
 	@font-face {
     font-family: Andika;
     src: rel="preload" url('AndikaNewBasic-Regular.ttf') format('truetype');
