@@ -25,6 +25,11 @@
       <a href="https://xman2156.github.io/amphibia/">Amphibia</a>
     </div>
 
+    <div class="alert">
+      <span class="closebtn">&times;</span>
+      <strong>INFO!</strong> This website is still being optimized for mobile. For the best experience, use a computer.
+    </div>
+
     <div class="count">
       <h1>It has been</h1>
       <h1 style="font-size:600%">
@@ -74,5 +79,14 @@
         <br>
       </div>
     </div>
+    
+    <script>
+      var close = document.getElementsByClassName("closebtn");
+        close[0].onclick = function(){
+          var div = this.parentElement;
+          div.style.opacity = "0";
+          setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+    </script>
   </body>
 </html>
