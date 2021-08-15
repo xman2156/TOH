@@ -1,6 +1,6 @@
 var oneDay = 24*60*60*1000;
-var latestRelease = new Date("2021-08-07T10:00:00"); // Newest Epsiode Release
-var nextRelease = new Date("2021-08-14T10:00:00"); // Next Episode release
+var latestRelease = new Date("2021-08-14T10:00:00"); // Newest Epsiode Release
+//var nextRelease = new Date("2021-08-14T10:00:00"); // Next Episode release
 var mode = 0; //DD:HH:MM:SS mode is default
 var lastHiatusMention = null;
 	
@@ -113,7 +113,7 @@ var hiatusList = [
 ['Last Episode','Next Episode','Preceding Release','Date Announced','Following Release','Days In The Dark','Days Waiting','Hiatus Length','Note'],
 ['Escape of the Palisman','Sense and Insensitivity','20 Mar 2020','7 Jul 2020','11 Jul 2020',111,4,115,'S1A - 1B Hiatus'],
 ['Young Blood, Old Souls','Seperate Tides','29 Aug 2020','3 Jun 2021','12 Jun 2021',278,9,287,'S1 - S2 Hiatus'],
-["Yesterday's Lie",'Follies at the Coven Day Parade','14 Aug 2021','???','???','N/A','N/A','N/A','This hiatus has not started yet.']
+["Yesterday's Lie",'Follies at the Coven Day Parade','14 Aug 2021','???','???','','N/A','N/A','This hiatus has not started yet.']
 ];
 	
 function hiatusRankCheck(){
@@ -156,9 +156,9 @@ function hiatusRankCheck(){
 //makes an HTML table from the array
 function createTable(array) {
 	var diffDays = timer("up", latestRelease, "count");
-	//array[array.length - 1][5] = diffDays; //Comment out when not in the dark
+	array[array.length - 1][5] = diffDays; //Comment out when not in the dark
 	//array[array.length - 1][6] = diffDays; //Comment out when no new episode date. Subtract by days in dark
-	//array[array.length - 1][7] = diffDays; //Comment out when not on hiatus
+	array[array.length - 1][7] = diffDays; //Comment out when not on hiatus
 	for(var i = 0; i < array.length ; i++){
 		var row = document.createElement('tr');
 		row.setAttribute("id", "myTr" + i);
