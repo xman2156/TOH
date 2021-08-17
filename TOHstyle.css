@@ -96,7 +96,7 @@ body {
 	background-color: #4d4c48;
 }
 
-@media only screen and (max-width: 813px) {
+@media only screen and (max-width: 830px) {
 	body {
 		background-image: url(TOHMobileBackground.jpg);
 	}
