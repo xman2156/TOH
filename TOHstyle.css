@@ -1,6 +1,7 @@
 .topnav {
   overflow: hidden;
   background-color:#333;
+  width:100%
 }
 
 .topnav a {
@@ -87,18 +88,18 @@ hr {
 }	
 
 body {
-	background-color: black;
+	background-color: #4d4c48;
 	background-image: url("TOHBackground.jpg");
   background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: cover;
+	background-size: 100%;
 	background-position: center;
 }
 
 table {
   border-collapse: collapse;
 	color: #27d49a;
-	width: 95%;
+	max-width: 95%;
 }
 
 td {
@@ -128,9 +129,9 @@ td {
   cursor: pointer;
 }
 
-	@font-face {
-    font-family: Andika;
-    src: rel="preload" url('AndikaNewBasic-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-	}
+@font-face {
+	font-family: Andika;
+	src: rel="preload" url('AndikaNewBasic-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
