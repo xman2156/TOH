@@ -1,5 +1,5 @@
 var oneDay = 24*60*60*1000;
-var latestRelease = new Date("2021-08-14T10:00:00"); // Newest Epsiode Release
+var latestRelease = new Date("2021-08-14T10:00:00"); // Newest Episode Release
 //var nextRelease = new Date("2021-08-14T10:00:00"); // Next Episode release
 var mode = 0; //DD:HH:MM:SS mode is default
 var lastHiatusMention = null;
@@ -41,7 +41,8 @@ function checkSubreddit(response){
 	//loads the next 100 if hiatus is not mentioned then runs the function again
 	if (lastHiatusMentionThisCheck == null) {
 		requestSubredditData(subbredditJSON.data.after);
-	} else {
+	} 
+	else {
 		lastHiatusMention = lastHiatusMentionThisCheck;
 	}
 };
@@ -53,7 +54,7 @@ function switchMode(){
 		document.getElementById("moreorless").innerHTML = "to return to normal.";
 	}
 	else if(mode == 1){
-		//DD:HH:MM:SS mode
+		//switch to DD:HH:MM:SS mode
 		mode = 0;
 		document.getElementById("moreorless").innerHTML = "to count less precisely instead.";
 	};
@@ -67,7 +68,7 @@ function timer(updown, zeroTime, id){
 	var timeNow = new Date();
 	if (updown == "up"){
 		var diffDays = (timeNow.getTime() - zeroTime.getTime()) / oneDay;
-		}
+	}
 	else if (updown == "down"){
 		var diffDays = (zeroTime.getTime() - timeNow.getTime()) / oneDay;
 	}
@@ -113,41 +114,41 @@ var hiatusList = [
 ['Last Episode','Next Episode','Preceding Release','Date Announced','Following Release','Days In The Dark','Days Waiting','Hiatus Length','Note'],
 ['Escape of the Palisman','Sense and Insensitivity','20 Mar 2020','7 Jul 2020','11 Jul 2020',111,4,115,'S1A - 1B Hiatus'],
 ['Young Blood, Old Souls','Seperate Tides','29 Aug 2020','3 Jun 2021','12 Jun 2021',278,9,287,'S1 - S2 Hiatus'],
-["Yesterday's Lie",'Follies at the Coven Day Parade','14 Aug 2021','???','???','','N/A','N/A','This hiatus has not started yet.']
+["Yesterday's Lie",'Follies at the Coven Day Parade','14 Aug 2021','???','???','','N/A','N/A','S2A - 2B Hiatus']
 ];
 	
 function hiatusRankCheck(){
 	var diffDays = timer("up", latestRelease, "count");
-      var hiatusRank = 0;
-      var nextHiatusLength = hiatusList[2][7]; //reference to the longest hiatus
-      for(var i = 1; i < hiatusList.length; i++){
-        if(hiatusList[i][7] > diffDays){
-			    hiatusRank += 1;
-			    if(hiatusList[i][7] < nextHiatusLength){
-            nextHiatusLength = hiatusList[i][7];
-          }
-			  }
-		  }
+  var hiatusRank = 0;
+  var nextHiatusLength = hiatusList[2][7]; //reference to the longest hiatus
+  for(var i = 1; i < hiatusList.length; i++){
+  	if(hiatusList[i][7] > diffDays){
+			hiatusRank += 1;
+			if(hiatusList[i][7] < nextHiatusLength){
+      	nextHiatusLength = hiatusList[i][7];
+      }
+		}
+	}
 	var suffix;
-		if(hiatusRank % 10 == 1 && hiatusRank != 11){
-			suffix = "st";
-		}
-		else if(hiatusRank % 10 == 2 && hiatusRank != 12){
-			suffix = "nd";
-		}
-		else if(hiatusRank % 10 == 3 && hiatusRank != 13){
-			suffix = "rd";
-		}
-		else if(hiatusRank == 0){
-			suffix = "The";
-		}
-		else suffix = "th";
+	if(hiatusRank % 10 == 1 && hiatusRank != 11){
+		suffix = "st";
+	}
+	else if(hiatusRank % 10 == 2 && hiatusRank != 12){
+		suffix = "nd";
+	}
+	else if(hiatusRank % 10 == 3 && hiatusRank != 13){
+		suffix = "rd";
+	}
+	else if(hiatusRank == 0){
+		suffix = "The";
+	}
+	else suffix = "th";
 	if(hiatusRank > 0){
 		document.getElementById("hiatusRank").innerHTML =  hiatusRank + suffix;
 	}
 	else{
 		document.getElementById("hiatusRank").innerHTML =  suffix;
-		}
+	}
 	document.getElementById("nextHiatusLength").innerHTML =  nextHiatusLength;
 	var nextHiatusLengthDate = new Date(latestRelease.getTime() + (nextHiatusLength * 86400000));
 	return nextHiatusLengthDate;
@@ -156,8 +157,8 @@ function hiatusRankCheck(){
 //makes an HTML table from the array
 function createTable(array) {
 	var diffDays = timer("up", latestRelease, "count");
-	array[array.length - 1][5] = diffDays; //Comment out when not in the dark
-	//array[array.length - 1][6] = diffDays; //Comment out when no new episode date. Subtract by days in dark
+	array[array.length - 1][5] = diffDays; //Comment out when out of the dark
+	//array[array.length - 1][6] = diffDays; //Comment out when no new episode date. Subtract by days in the dark
 	array[array.length - 1][7] = diffDays; //Comment out when not on hiatus
 	for(var i = 0; i < array.length ; i++){
 		var row = document.createElement('tr');
@@ -177,7 +178,7 @@ window.setInterval(function(){
 	timer("up", latestRelease, "count");
 	timer("down", hiatusRankCheck(), "count2");
 	timer("up", lastHiatusMention, "count3");
-	timer("down", nextRelease, "count4");
+	//timer("down", nextRelease, "count4"); //Comment out when no new release date
 }, 250);
 	
 //every 30 seconds, the most recent 100 posts on the subreddit are loaded up again in case there has been a new post that mentions hiatus
