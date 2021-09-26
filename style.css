@@ -16,23 +16,23 @@
 }
 
 .topnav a:hover {
-  border-bottom: 3px solid #2ef8b5;
+  border-bottom: 3px solid #73efff;
 }
 
 .topnav a.active {
-  border-bottom: 3px solid #2ef8b5;
+  border-bottom: 3px solid #73efff;
 }
 
 div {
 	font-family: "Andika";
 	text-align: center;
-	color: #2ef8b5;
+	color: #73efff;
 	line-height: 1.4;
 }
 
 hr {
 	border: none;
-	background-color: #2ef8b5;
+	background-color: #73efff;
 	height: 5px;
 	width: 80%;
 }
@@ -47,7 +47,7 @@ hr {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
-	color: #2ef8b5;
+	color: #73efff;
 	letter-spacing: 3px;
 }
 
@@ -64,7 +64,7 @@ hr {
 }	
 
 body {
-	background-image: url("background.jpg");
+	background-image: url("background.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -80,14 +80,14 @@ body {
 
 table {
   border-collapse: collapse;
-	color: #27d49a;
+	color: #69deee;
 	max-width: 95%;
 }
 
 td {
 	padding: 3px;
 	text-align: center;
-	border: 3px solid #2ef8b5;
+	border: 3px solid #73efff;
 	padding: 4px;
 	background-color: rgba(0,0,0,0.6);
 }
@@ -103,7 +103,7 @@ td {
 }
 
 .links:visited {
-	color: #21ff6b;
+	color: #1b7eff;
 }
 
 .links:hover {
