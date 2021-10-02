@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>contact form</title>
+</head>
+
+<body>
+
+<link href="style.css" rel="stylesheet">
+
+<div class="body">
+
+    <div id="form">
+    <h3 class="h3">Contact us</h3>
+
+    <form id="form-id" class="form-class" method="post" action="bugfixForm.php">
+        
+        <div class="form-group">
+            <label for="Name" class="label">Your name</label>
+            <div class="input-group">
+                <input type="text" id="Name" name="Name" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Email" class="label">Your email address</label>
+            <div class="input-group">
+                <input type="email" id="Email" name="Email" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Message" class="label">Your message</label>
+            <div class="input-group">
+                <textarea id="Message" name="Message" class="form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="button" class="btn btn-primary btn-lg btn-block">Send Message</button>
+        </div>
+    </form>
+    </div>
+
+</div>
+
+</body>
+</html>
