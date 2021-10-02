@@ -16,23 +16,23 @@
 }
 
 .topnav a:hover {
-  border-bottom: 3px solid #73efff;
+  border-bottom: 3px solid #3cd8ff;
 }
 
 .topnav a.active {
-  border-bottom: 3px solid #73efff;
+  border-bottom: 3px solid #3cd8ff;
 }
 
 div {
 	font-family: "Andika";
 	text-align: center;
-	color: #73efff;
+	color: #3cd8ff;
 	line-height: 1.4;
 }
 
 hr {
 	border: none;
-	background-color: #73efff;
+	background-color: #3cd8ff;
 	height: 5px;
 	width: 80%;
 }
@@ -47,7 +47,7 @@ hr {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
-	color: #73efff;
+	color: #3cd8ff;
 	letter-spacing: 3px;
 }
 
@@ -80,20 +80,20 @@ body {
 
 table {
   border-collapse: collapse;
-	color: #69deee;
+	color: #3cd8ff;
 	max-width: 95%;
 }
 
 td {
 	padding: 3px;
 	text-align: center;
-	border: 3px solid #73efff;
+	border: 3px solid #3cd8ff;
 	padding: 4px;
 	background-color: rgba(0,0,0,0.6);
 }
 
 #changeCount:hover {
-  color: #7dcbff;
+  color: #27f7a7;
   cursor: pointer;
 }
 
@@ -103,10 +103,10 @@ td {
 }
 
 .links:visited {
-	color: #1b7eff;
+	color: #21ffbc;
 }
 
 .links:hover {
-	color: #7dcbff;
+	color: #2181ff;
   cursor: pointer;
 }
