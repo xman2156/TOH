@@ -1,10 +1,10 @@
 .topnav {
   overflow: hidden;
   background-color:#333;
-  width:100%;
+  width: 100%;
 }
 
-.topnav a {
+.topnav a.website {
   float: left;
   display: block;
   color: white;
@@ -13,6 +13,10 @@
   text-decoration: none;
   font-size: 17px;
   border-bottom: 3px solid transparent;
+}
+
+.topnav a.report {
+  float: right;
 }
 
 .topnav a:hover {
@@ -65,7 +69,7 @@ hr {
 
 body {
 	background-image: url("background.png");
-	background-position: center center;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
