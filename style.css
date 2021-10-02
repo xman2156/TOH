@@ -74,7 +74,7 @@ body {
 
 @media only screen and (orientation: portrait) {
 	body {
-		background-image: url(mobileBackground.png);
+		background-position: 23% 50%;
 	}
 }
 
