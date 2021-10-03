@@ -1,14 +1,25 @@
 <html lang="en">
   <head>
+    <title>The Silence of Luz - The Owl House Hiatus Tracker</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1000%, initial-scale=0.001">
-    <title>The Silence of Luz - The Owl House Hiatus Tracker</title>
-    <script type="text/javascript" src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="description" content="Tracks the length between episodes of the ongoing Disney Channel show,
     The Owl House as well as keeping a list of these hiatuses.">
+
+    <link rel="stylesheet" type="text/css" href="style.css">  
     <link rel="icon" href="icon.ico" type="image/x-icon"/>
 
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script>
+	    $(window).load(function() {
+	    	$("#loader").fadeOut("slow");;
+        $("#page").fadeIn("slow");;
+	    });
+    </script>
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6ZB328E2W"></script>
     <script>
@@ -20,65 +31,69 @@
   </head>
   
   <body onload="createTable(hiatusList); requestSubredditData();">
-    <div class="topnav">
-      <a class = "active website" href="https://xman2156.github.io/TOH/">The Owl House</a>
-      <a class = "website" href="https://xman2156.github.io/amphibia/">Amphibia</a>
-      <a class = "website report" target="_blank" href="https://forms.gle/amwnqCuJJHjYkppz5">Report a bug or ask a question</a>
-    </div>
+    <div id="loader"></div>
+    <div style="display:none;" id="page">
+      <div class="topnav">
+        <a class = "active website" href="https://xman2156.github.io/TOH/">The Owl House</a>
+        <a class = "website" href="https://xman2156.github.io/amphibia/">Amphibia</a>
+        <a class = "website report" target="_blank" href="https://forms.gle/amwnqCuJJHjYkppz5">Report a bug or ask a question</a>
+      </div>
 
-    <div class="count">
-      <h1>It has been</h1>
-      <h1 style="font-size:600%">
-      <span id="count">xxx</span></h1>
-      <h1>since "Yesterday's Lie" aired</h1>
-    </div>
+      <div class="count">
+        <h1>It has been</h1>
+        <h1 style="font-size:600%">
+        <span id="count">xxx</span></h1>
+        <h1>since "Yesterday's Lie" aired</h1>
+      </div>
 
-    <div class="tab">
-      <p style="font-size:150%">
-				<!--Note: The Owl House is currently not on hiatus.<br>-->
-				<a onclick=switchMode() id="changeCount"> Click here <span id="moreorless">to count less precisely.</span></a>
-			</p>
-      <hr>
+      <div class="tab">
+        <p style="font-size:150%">
+				  <!--Note: The Owl House is currently not on hiatus.<br>-->
+				  <a onclick=switchMode() id="changeCount"> Click here <span id="moreorless">to count less precisely.</span></a>
+			  </p>
+        <hr>
 
-      <div class="list">
-        <h1> The Grand List of Hiatuses </h1>
-        <table align="center" id="hiatus"></table>
-        <br>
-        <div class= "reddit">
-          Also, it has been <span id="count3">over 1000 posts on /r/TheOwlHouse</span> since <a id="hiatusLink" href="" class="links"> the Last Mention Of The Hiatus</a><br> on /r/TheOwlHouse.
+        <div class="list">
+          <h1> The Grand List of Hiatuses </h1>
+          <table align="center" id="hiatus"></table>
+          <br>
+          <div class= "reddit">
+            Also, it has been <span id="count3">over 1000 posts on /r/TheOwlHouse</span> since <a id="hiatusLink" href="" class="links"> the Last Mention Of The Hiatus</a><br> on /r/TheOwlHouse.
+          </div>
         </div>
-      </div>
-      <br>
-      <hr>
-  
-      <div class="countdowns">
-        <h2>Time To Next Release<br>"Follies at the Coven Day Parade"</h2>
-        <h1 style="font-size:250%">
-          <span id="count4">Unknown</span>
-        </h1>
-        <hr>
-    
-        <h2>Time To Length of <span id="hiatusRank">nth</span> Longest Hiatus<br>(Currently Stands At <span id="nextHiatusLength">n</span> Days)</h2>
-        <h1 style="font-size:250%">
-          <span id="count2">Unknown</span>
-        </h1>
-        <hr>
-      </div>
-
-      <div class="trailers">
-        <h2>Watch the Season 2 Trailer</h2>
-        <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/j0Xk_Wa6Ync">
-        </iframe>
-        <hr>
-      </div>
-
-      <div class="link">
-        <h3>
-          <a class="links" target="_blank" href="https://github.com/xman2156"> You can find me on GitHub</a><br>
-          <a class="links" target="_blank" href="https://forms.gle/amwnqCuJJHjYkppz5"> Report a bug, request a new feature, or ask a question here</a><br>
-        </h3>
         <br>
+        <hr>
+  
+        <div class="countdowns">
+          <h2>Time To Next Release<br>"Follies at the Coven Day Parade"</h2>
+          <h1 style="font-size:250%">
+            <span id="count4">Unknown</span>
+          </h1>
+          <hr>
+    
+          <h2>Time To Length of <span id="hiatusRank">nth</span> Longest Hiatus<br>(Currently Stands At <span id="nextHiatusLength">n</span> Days)</h2>
+          <h1 style="font-size:250%">
+            <span id="count2">Unknown</span>
+          </h1>
+          <hr>
+        </div>
+
+        <div class="trailers">
+          <h2>Watch the Season 2 Trailer</h2>
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/j0Xk_Wa6Ync" 
+            title="YouTube video player">
+          </iframe>
+          <hr>
+        </div>
+
+        <div class="link">
+          <h3>
+            <a class="links" target="_blank" href="https://github.com/xman2156"> You can find me on GitHub</a><br>
+            <a class="links" target="_blank" href="https://forms.gle/amwnqCuJJHjYkppz5"> Report a bug, request a new feature, or ask a question here</a><br>
+          </h3>
+          <br>
+        </div>
       </div>
     </div>
   </body>
