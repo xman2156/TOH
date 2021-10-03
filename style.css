@@ -83,6 +83,7 @@ body {
 }
 
 table {
+  margin: auto;
   border-collapse: collapse;
 	color: #3cd8ff;
 	max-width: 95%;
