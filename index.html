@@ -37,7 +37,15 @@
         <a class = "website" href="https://xman2156.github.io/amphibia/">Amphibia</a>
         <a class = "report website" target="_blank" href="https://forms.gle/amwnqCuJJHjYkppz5">Report a bug or ask a question</a>
       </div>
-
+      
+      <button id="infoBtn">i</button>     
+      <div id="info">        
+        <div class="info-content">
+          <span class="close">&times;</span>
+          <p>Will be updated soon...</p>
+        </div>
+      </div>
+      
       <div class="count">
         <h1>It has been</h1>
         <h1 style="font-size:600%">
@@ -98,3 +106,23 @@
     </div>
   </body>
 </html>
+
+<script>
+  var modal = document.getElementById("info");
+  var btn = document.getElementById("infoBtn");
+  var span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>

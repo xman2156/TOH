@@ -54,7 +54,7 @@ function switchMode(){
 		document.getElementById("moreorless").innerHTML = "to return to normal.";
 	}
 	else if(mode == 1){
-		//switch to DD:HH:MM:SS mode
+		//DD:HH:MM:SS mode
 		mode = 0;
 		document.getElementById("moreorless").innerHTML = "to count less precisely instead.";
 	};
