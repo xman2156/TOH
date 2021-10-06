@@ -10,6 +10,7 @@
     <link rel="icon" href="icon.ico" type="image/x-icon"/>
 
     <script type="text/javascript" src="script.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <script>
@@ -37,7 +38,9 @@
       <div id="info">        
         <div class="info-content">
           <span class="close">&times;</span>
-          <p>Will be updated soon...</p>
+          <p>This website tracks the hiatuses of the show "The Owl House" A hiatus is a time period starting from the end 
+            of one announced schedule to the begining of another. This site is maintained by one person. 
+            <br> Some planned updates so far: <br> MANY mobile improvements</p>
         </div>
       </div>
 
@@ -59,7 +62,7 @@
 				  <!--Note: The Owl House is currently not on hiatus.<br>-->
 				  <a onclick=switchMode() id="changeCount"> Click here <span id="moreorless">to count less precisely.</span></a>
 			  </p>
-        <hr>
+        <hr class="spacer">
 
         <div class="list">
           <h1> The Grand List of Hiatuses </h1>
@@ -70,20 +73,20 @@
           </div>
         </div>
         <br>
-        <hr>
+        <hr class="spacer">
   
         <div class="countdowns">
           <h2>Time To Next Release<br>"Follies at the Coven Day Parade"</h2>
           <h1 style="font-size:250%">
             <span id="count4">Unknown</span>
           </h1>
-          <hr>
+          <hr class="spacer">
     
           <h2>Time To Length of <span id="hiatusRank">nth</span> Longest Hiatus<br>(Currently Stands At <span id="nextHiatusLength">n</span> Days)</h2>
           <h1 style="font-size:250%">
             <span id="count2">Unknown</span>
           </h1>
-          <hr>
+          <hr class="spacer">
         </div>
 
         <div class="trailers">
@@ -93,7 +96,7 @@
             loading="lazy" 
             title="YouTube video player">
           </iframe>
-          <hr>
+          <hr class="spacer">
         </div>
 
         <div class="link">
@@ -105,25 +108,6 @@
         </div>
       </div>
     </div>
+    <script src="modal.js"></script>
   </body>
 </html>
-
-<script>
-  var modal = document.getElementById("info");
-  var btn = document.getElementById("infoBtn");
-  var span = document.getElementsByClassName("close")[0];
-
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
-
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-</script>
