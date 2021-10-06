@@ -26,7 +26,7 @@ btn.onclick = function() {
 closeBtn.onclick = function() {
   modal.style.display = "none";
   document.body.style.background = "url('background.webp')";
-  dim()
+  
 }
 
 window.onclick = function(event) {
