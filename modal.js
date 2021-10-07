@@ -12,6 +12,7 @@ function dim() {
   body.backgroundRepeat = "no-repeat";
   body.backgroundPosition = "center";
   body.backgroundAttachment = "fixed";
+  body.overflow = "hidden";
   body.color = "#006680";
   for (i=0; i < spacer.length; i++) {
     spacer[i].style.background = "#006680";
@@ -24,6 +25,7 @@ function bright() {
   body.backgroundRepeat = "no-repeat";
   body.backgroundPosition = "center";
   body.backgroundAttachment = "fixed";
+  body.overflow = "visible";
   body.color = "#3cd8ff";
   for (i=0; i < spacer.length; i++) {
     spacer[i].style.background = "#3cd8ff";
