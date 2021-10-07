@@ -158,8 +158,8 @@ function hiatusRankCheck(){
 function createTable(array) {
 	var diffDays = timer("up", latestRelease, "count");
 	array[array.length - 1][5] = diffDays + " and counting"; //Comment out when out of the dark
-	//array[array.length - 1][6] = diffDays; //Comment out when no new episode date. Subtract by days in the dark
-	array[array.length - 1][7] = diffDays; //Comment out when not on hiatus
+	//array[array.length - 1][6] = diffDays - 63 + " and counting"; //Comment out when no new episode date. Subtract by days in the dark
+	array[array.length - 1][7] = diffDays + " and counting"; //Comment out when not on hiatus
 	for(var i = 0; i < array.length ; i++){
 		var row = document.createElement('tr');
 		row.setAttribute("id", "myTr" + i);
