@@ -9,10 +9,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">  
     <link rel="icon" href="icon.ico" type="image/x-icon"/>
 
-    <script type="text/javascript" src="script.js"></script>
-    
+    <script type="text/javascript" src="script.js"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <script>
 	    $(window).load(function() {
 	    	$("#loader").fadeOut("slow");;
@@ -91,13 +89,11 @@
 
         <div class="trailers">
           <h2>Watch the Season 2 Trailer</h2>
-          <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/j0Xk_Wa6Ync"
-            loading="lazy" 
-            title="YouTube video player">
-          </iframe>
-          <hr class="spacer">
+          <div id="youtube">
+            <div class="play-button"></div>
+          </div>
         </div>
+        <hr class="spacer">
 
         <div class="link">
           <h3>
@@ -109,5 +105,6 @@
       </div>
     </div>
     <script src="modal.js"></script>
+    <script src="youtube.js"></script>
   </body>
 </html>

@@ -6,8 +6,18 @@ body {
 	background-size: cover;
 	background-color: #4d4c48;
   color: #3cd8ff;
+  font-family: "Garamond";
+  text-align: center;
+	line-height: 1.4;
 }
 
+@media only screen and (orientation: portrait) {
+	body {
+		background-position: 23% 50%;
+	}
+}
+
+/* Page loading wheel */
 #loader {
   position: absolute;
   left: 50%;
@@ -33,6 +43,7 @@ body {
   100% { transform: rotate(360deg); }
 }
 
+/* page animation after page loaded */
 #page {
   position: relative;
   -webkit-animation-name: animatebottom;
@@ -51,6 +62,7 @@ body {
   to{ bottom:0; opacity:1 }
 }
 
+/* info button, info modal, modal close button */
 #infoBtn {
   z-index: 1;
   border-radius: 100%;
@@ -100,6 +112,7 @@ body {
   cursor: pointer;
 }
 
+/* topnav bar */
 .topnav {
   overflow: hidden;
   background-color:#333;
@@ -129,19 +142,6 @@ body {
   border-bottom: 3px solid #3cd8ff;
 }
 
-div {
-	font-family: "Garamond";
-	text-align: center;
-	line-height: 1.4;
-}
-
-hr {
-	border: none;
-	background-color: #3cd8ff;
-	height: 5px;
-	width: 80%;
-}
-
 .count {
 	position: absolute;
 	top: 50%;
@@ -149,6 +149,18 @@ hr {
 	transform: translate(-50%, -50%);
 	width: 90%;
 	letter-spacing: 3px;
+}
+
+#changeCount:hover {
+  color: #cc29ed;
+  cursor: pointer;
+}
+
+hr {
+	border: none;
+	background-color: #3cd8ff;
+	height: 5px;
+	width: 80%;
 }
 
 .tab {
@@ -159,12 +171,7 @@ hr {
 	height: 100%;
 }	
 
-@media only screen and (orientation: portrait) {
-	body {
-		background-position: 23% 50%;
-	}
-}
-
+/* table styling */
 table {
   margin: auto;
   border-collapse: collapse;
@@ -179,9 +186,70 @@ td {
 	background-color: rgba(0,0,0,0.6);
 }
 
-#changeCount:hover {
-  color: #cc29ed;
-  cursor: pointer;
+body.info-open #page{
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+
+/* youtube lazy loading */
+.trailers {
+  max-width: 560px;
+	margin: 60px auto;
+	padding: 0 20px;
+}
+#youtube {
+	background-color: #000;
+	margin-bottom: 30px;
+	position: relative;
+	padding-top: 56.25%;
+	overflow: hidden;
+	cursor: pointer;
+}
+#youtube img {
+	width: 100%;
+	top: -16.82%;
+	left: 0;
+	opacity: 0.7;
+}
+#youtube .play-button {
+	width: 90px;
+	height: 60px;
+	background-color: #333;
+	box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+	z-index: 1;
+	opacity: 0.8;
+	border-radius: 6px;
+}
+#youtube .play-button:before {
+	content: "";
+	border-style: solid;
+	border-width: 15px 0 15px 26.0px;
+	border-color: transparent transparent transparent #fff;
+}
+#youtube img,
+#youtube .play-button {
+	cursor: pointer;
+}
+#youtube img,
+#youtube iframe,
+#youtube .play-button,
+#youtube .play-button:before {
+	position: absolute;
+}
+#youtube .play-button,
+#youtube .play-button:before {
+	top: 50%;
+	left: 50%;
+	transform: translate3d( -50%, -50%, 0 );
+}
+#youtube iframe {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
 }
 
 .links {
@@ -196,4 +264,73 @@ td {
 .links:hover {
 	color: #2181ff;
   cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Modal {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.5s;
+  overflow: auto;
+  transition: all 0.3s linear;
+}
+
+.Modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 300px;
+  height: 450px;
+}
+
+.ModalOpen { overflow: hidden; }
+
+.is-hidden { display: none; }
+
+.is-visuallyHidden { opacity: 0; }
+
+.Close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 16px;
+}
+
+.Close:hover, .Close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.is-blurred {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
 }
