@@ -14,7 +14,7 @@ body {
 @media only screen and (orientation: portrait) {
 	body {
 		background-position: 23% 50%;
-    background-size: 50%;
+    background-size: 100%;
 	}
 }
 
