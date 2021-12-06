@@ -20,6 +20,7 @@ function dim() {
 
 function bright() {
   body.background = "url('background.webp')";
+  body.backgroundColor = "#4d4c48";
   body.backgroundSize = "cover";
   body.backgroundRepeat = "no-repeat";
   body.backgroundPosition = "center";
