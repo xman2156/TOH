@@ -112,9 +112,9 @@ function timer(updown, zeroTime, id){
 //The Grand Array of Hiatuses
 var hiatusList = [
 ['Last Episode','Next Episode','Preceding Release','Date Announced','Following Release','Days In The Dark','Days Waiting','Hiatus Length','Note'],
-['Escape of the Palisman','Sense and Insensitivity','20 Mar 2020','7 Jul 2020','11 Jul 2020',111,4,115,''],
-['Young Blood, Old Souls','Seperate Tides','29 Aug 2020','3 Jun 2021','12 Jun 2021',278,9,287,''],
-["Yesterday's Lie",'Follies at the Coven Day Parade','14 Aug 2021','???','???','','N/A','N/A','']
+['Escape of the Palisman','Sense and Insensitivity','Mar 20 2020','Jul 7 2020','Jul 11 2020',111,4,115,''],
+['Young Blood, Old Souls','Seperate Tides','Aug 29 2020','Jun 3 2021','Jun 12 2021',278,9,287,''],
+["Yesterday's Lie",'Follies at the Coven Day Parade','Aug 14 2021','???','???','','N/A','N/A','']
 ];
 	
 function hiatusRankCheck(){
