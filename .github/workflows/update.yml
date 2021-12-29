@@ -16,8 +16,8 @@ jobs:
         
       - name: Commit files # commit the output folder
         run: |
-          git config --local user.email "test@github.com"
-          git config --local user.name "GitHub Action test"
+          git config --local user.email "xman2156@gmail.com"
+          git config --local user.name "xman2156"
           git add .
           git commit -m "Update page for new epsiode"
       - name: Push changes # push the output folder to your repo
