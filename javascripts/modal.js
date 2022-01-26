@@ -6,7 +6,7 @@ var body = document.body.style;
 var i;
 
 function dim() {
-  body.background = "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('background.webp')";
+  body.background = "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/background.webp')";
   body.backgroundSize = "cover";
   body.backgroundRepeat = "no-repeat";
   body.backgroundPosition = "center";
@@ -19,7 +19,7 @@ function dim() {
 }
 
 function bright() {
-  body.background = "url('background.webp')";
+  body.background = "url('images/background.webp')";
   body.backgroundColor = "#4d4c48";
   body.backgroundSize = "cover";
   body.backgroundRepeat = "no-repeat";
