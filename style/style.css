@@ -117,7 +117,7 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 67%;
   border-bottom: 3px solid transparent;
 }
 
@@ -259,4 +259,11 @@ body.info-open #page {
 .links:hover {
 	color: #2181ff;
   cursor: pointer;
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url('../Nunito-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
