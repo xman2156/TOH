@@ -42,21 +42,21 @@ function checkSubreddit(response){
 	if (lastHiatusMentionThisCheck == null) {
 		requestSubredditData(subbredditJSON.data.after);
 	} 
-	else {
+  else {
 		lastHiatusMention = lastHiatusMentionThisCheck;
 	}
 };
 
 function switchMode(){
-	if(mode == 0){
+  if(mode == 0){
 		//switch to DD:HH:MM:SS mode
 		mode = 1;
 		document.getElementById("moreorless").innerHTML = "to return to normal.";
-	}
-	else if(mode == 1){
-		//DD:HH:MM:SS mode
-		mode = 0;
-		document.getElementById("moreorless").innerHTML = "to count less precisely instead.";
+  }
+  else if(mode == 1){
+    //DD:HH:MM:SS mode
+    mode = 0;
+    document.getElementById("moreorless").innerHTML = "to count less precisely instead.";
 	};
 };
 	 
@@ -102,7 +102,7 @@ function timer(updown, zeroTime, id){
 	else if (mode == 2){
 		var totalTime = diffSeconds + (diffMinutes * 60) + (diffHours * 3600) + (diffDays * 86400);
 		document.getElementById(id).innerHTML = totalTime.toLocaleString() + " Seconds";
-	};		
+	};
 	if (updown == "down" && diffDays < 0){
 		document.getElementById(id).innerHTML =  "Time's Up!";
 	}	
@@ -122,10 +122,10 @@ function hiatusRankCheck(){
   var hiatusRank = 0;
   var nextHiatusLength = hiatusList[2][4]; //reference to the longest hiatus
   for(var i = 1; i < hiatusList.length; i++){
-  	if(hiatusList[i][4] > diffDays){
+    if(hiatusList[i][4] > diffDays){
 			hiatusRank += 1;
 			if(hiatusList[i][4] < nextHiatusLength){
-      	nextHiatusLength = hiatusList[i][4];
+        nextHiatusLength = hiatusList[i][4];
       }
 		}
 	}
