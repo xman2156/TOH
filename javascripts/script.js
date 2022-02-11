@@ -1,6 +1,6 @@
 var oneDay = 24*60*60*1000;
 var latestRelease = new Date("2021-08-14T10:00:00-06:00"); // Newest Episode Release
-//var nextRelease = new Date("2021-08-14T10:00:00-06:00"); // Next Episode release
+var nextRelease = new Date("2022-03-19T10:00:00-06:00"); // Next Episode release
 var mode = 0; //DD:HH:MM:SS mode is default
 var lastHiatusMention = null;
 	
@@ -114,7 +114,7 @@ var hiatusList = [
 ['Last Episode','Next Episode','Preceding Release','Following Release','Hiatus Length','Note'],
 ['Escape of the Palisman','Sense and Insensitivity','Mar 20 2020','Jul 11 2020',115,''],
 ['Young Blood, Old Souls','Seperate Tides','Aug 29 2020','Jun 12 2021',287,''],
-["Yesterday's Lie",'Follies at the Coven Day Parade','Aug 14 2021','???','N/A','']
+["Yesterday's Lie",'Follies at the Coven Day Parade','Aug 14 2021','Mar 19 2022',217,'']
 ];
 	
 function hiatusRankCheck(){
@@ -176,7 +176,7 @@ window.setInterval(function(){
 	timer("up", latestRelease, "count");
 	timer("down", hiatusRankCheck(), "count2");
 	timer("up", lastHiatusMention, "count3");
-	//timer("down", nextRelease, "count4"); //Comment out when no new release date
+	timer("down", nextRelease, "count4"); //Comment out when no new release date
 }, 250);
 	
 //every 30 seconds, the most recent 100 posts on the subreddit are loaded up again in case there has been a new post that mentions hiatus

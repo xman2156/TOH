@@ -117,7 +117,7 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 67%;
+  font-size: 17px; /*67%*/
   border-bottom: 3px solid transparent;
 }
 
