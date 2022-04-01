@@ -10,7 +10,7 @@ var episodeList = [
   ['O Titan, Where Art Thou', 'Clouds on the Horizon', new Date("2022-05-14T10:00:00-06:00"), new Date("2022-05-21T10:00:00-06:00")],
   ['Clouds on the Horizon', "King's Tide", new Date("2022-05-21T10:00:00-06:00"), new Date("2022-05-28T10:00:00-06:00")]
 ];
-var startDate = new Date("2022-03-26T10:00:00-06:00"); // Next Episode release
+var startDate = new Date("2022-03-26T10:00:00-06:00");
 var today = Date.now();
 var weeksPassed = Math.floor((today - Date.parse(startDate))/(24*3600*1000*7));
 var latestRelease = episodeList[weeksPassed][2];
