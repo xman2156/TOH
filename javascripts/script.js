@@ -1,10 +1,28 @@
+//Automatic episode change
+var episodeList = [
+  ['Elsewhere and Elsewhen','Any Sport in a Storm',new Date("2022-03-26T10:00:00-06:00"),new Date("2022-04-02T10:00:00-06:00")],
+  ['Any Sport in a Storm','Reaching Out',new Date("2022-04-02T10:00:00-06:00"),new Date("2022-04-09T10:00:00-06:00")],
+  ['Reaching Out', "Them's the Breaks, Kid", new Date("2022-04-09T10:00:00-06:00"), new Date("2022-04-16T10:00:00-06:00")],
+  ["Them's the Breaks, Kid", 'Hollow Mind', new Date("2022-04-16T10:00:00-06:00"), new Date("2022-04-23T10:00:00-06:00")],
+  ['Hollow Mind', 'Edge of the World', new Date("2022-04-23T10:00:00-06:00"), new Date("2022-04-30T10:00:00-06:00")],
+  ['Edge of the World', 'Labyrinth Runners', new Date("2022-04-30T10:00:00-06:00"), new Date("2022-05-07T10:00:00-06:00")],
+  ['Labyrinth Runners', 'O Titan, Where Art Thou', new Date("2022-05-07T10:00:00-06:00"), new Date("2022-05-14T10:00:00-06:00")],
+  ['O Titan, Where Art Thou', 'Clouds on the Horizon', new Date("2022-05-14T10:00:00-06:00"), new Date("2022-05-21T10:00:00-06:00")],
+  ['Clouds on the Horizon', "King's Tide", new Date("2022-05-21T10:00:00-06:00"), new Date("2022-05-28T10:00:00-06:00")]
+];
+var startDate = new Date("2022-03-26T10:00:00-06:00"); // Next Episode release
+var today = Date.now();
+var weeksPassed = Math.floor((today - Date.parse(startDate))/(24*3600*1000*7));
+var latestRelease = episodeList[weeksPassed][2];
+var nextRelease = episodeList[weeksPassed][3];
+document.getElementById("previousEpisode").innerHTML = episodeList[weeksPassed][0];
+document.getElementById("nextEpisode").innerHTML = episodeList[weeksPassed][1]
+
+
 var oneDay = 24*60*60*1000;
-var latestRelease = new Date("2022-03-26T10:00:00-06:00"); // Newest Episode Release
-var nextRelease = new Date("2022-04-02T10:00:00-06:00"); // Next Episode release
 var mode = 0; //DD:HH:MM:SS mode is default
 var lastHiatusMention = null;
 	
-//voodoo magic
 function GetThen(yourUrl, onload){
 	var Httpreq = new XMLHttpRequest();
 	Httpreq.open("GET",yourUrl,true);
@@ -111,10 +129,10 @@ function timer(updown, zeroTime, id){
 	
 //The Grand Array of Hiatuses
 var hiatusList = [
-['Last Episode','Next Episode','Preceding Release','Following Release','Hiatus Length','Note'],
-['Escape of the Palisman','Sense and Insensitivity','Mar 20 2020','Jul 11 2020',115,''],
-['Young Blood, Old Souls','Seperate Tides','Aug 29 2020','Jun 12 2021',287,''],
-["Yesterday's Lie",'Follies at the Coven Day Parade','Aug 14 2021','Mar 19 2022',217,'']
+  ['Last Episode','Next Episode','Preceding Release','Following Release','Hiatus Length','Note'],
+  ['Escape of the Palisman','Sense and Insensitivity','Mar 20 2020','Jul 11 2020',115,''],
+  ['Young Blood, Old Souls','Seperate Tides','Aug 29 2020','Jun 12 2021',287,''],
+  ["Yesterday's Lie",'Follies at the Coven Day Parade','Aug 14 2021','Mar 19 2022',217,'']
 ];
 	
 function hiatusRankCheck(){

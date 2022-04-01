@@ -1,15 +1,16 @@
 <html lang="en">
   <head>
     <title>The Silence of Luz - The Owl House Hiatus Tracker</title>
-
+    
     <meta charset="UTF-8">
     <meta name="description" content="Tracks the length between episodes of the ongoing Disney Channel show,
     The Owl House as well as keeping a list of these hiatuses.">
 
     <link rel="stylesheet" type="text/css" href="style/style.css">  
     <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
-
-    <script type="text/javascript" src="javascripts/script.js"></script> 
+    <script src="javascripts/script.js" defer></script>
+    <script src="javascripts/modal.js" defer></script>
+    <script src="javascripts/youtube.js" defer></script>
     <script src="javascripts/jquery-3.6.0.min.js"></script>
     <script>
 	    $(window).on("load", function() {
@@ -58,7 +59,9 @@
         <h1>It has been</h1>
         <h1 style="font-size:600%">
         <span id="count">xxx</span></h1>
-        <h1>since "Elsewhere and Elsewhen" aired</h1>
+        <h1>
+          "<span id="previousEpisode">xxx</span>"
+        </h1>
       </div>
       
       <div class="tab">
@@ -80,7 +83,7 @@
         <hr class="spacer">
   
         <div class="countdowns">
-          <h2>Time To Next Release<br>"Any Sport in a Storm"</h2>
+          <h2>Time To Next Release<br>"<span id=nextEpisode>xxx</span>"</h2>
           <h1 style="font-size:250%">
             <span id="count4">Unknown</span>
           </h1>
@@ -111,7 +114,5 @@
         </div>
       </div>
     </div>
-    <script src="javascripts/modal.js"></script>
-    <script src="javascripts/youtube.js"></script>
   </body>
 </html>
