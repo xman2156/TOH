@@ -121,6 +121,51 @@ body {
   border-bottom: 3px solid transparent;
 }
 
+.dropdown {
+  float: left;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  border-bottom: 3px solid transparent;
+  font-family: inherit;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3cd8ff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #525252;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .topnav a.report {
   float: right;
 }
@@ -129,7 +174,7 @@ body {
   border-bottom: 3px solid #3cd8ff;
 }
 
-.topnav a.active {
+.topnav a.active, .topnav div.active {
   border-bottom: 3px solid #3cd8ff;
 }
 
