@@ -9,7 +9,7 @@ var episodeList = [
   ['Labyrinth Runners', 'O Titan, Where Art Thou', new Date("2022-05-07T09:00:00-05:00"), new Date("2022-05-14T09:00:00-05:00")],
   ['O Titan, Where Art Thou', 'Clouds on the Horizon', new Date("2022-05-14T09:00:00-05:00"), new Date("2022-05-21T09:00:00-05:00")],
   ['Clouds on the Horizon', "King's Tide", new Date("2022-05-21T09:00:00-05:00"), new Date("2022-05-28T09:00:00-05:00")],
-  ["King's Tide", "???", new Date("2022-05-28T09:00:00-05:00)]
+  ["King's Tide", "???", new Date("2022-05-28T09:00:00-05:00")]
 ];
 var startDate = new Date("2022-03-26T09:00:00-05:00");
 var today = Date.now();
