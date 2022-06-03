@@ -1,6 +1,6 @@
 //Automatic episode change
 var episodeList = [
-  ['Clouds on the Horizon', "King's Tide", new Date("2022-05-21T09:00:00-05:00"), new Date("2022-05-28T09:00:00-05:00")]
+  ["King's Tide", "???", new Date("2022-05-28T09:00:00-05:00")]
 ];
 var startDate = new Date("2022-03-26T09:00:00-05:00");
 var today = Date.now();
@@ -124,7 +124,8 @@ var hiatusList = [
   ['Last Episode','Next Episode','Preceding Release','Following Release','Hiatus Length','Note'],
   ['Escape of the Palisman','Sense and Insensitivity','Mar 20 2020','Jul 11 2020',115,''],
   ['Young Blood, Old Souls','Seperate Tides','Aug 29 2020','Jun 12 2021',287,''],
-  ["Yesterday's Lie",'Follies at the Coven Day Parade','Aug 14 2021','Mar 19 2022',217,'']
+  ["Yesterday's Lie",'Follies at the Coven Day Parade','Aug 14 2021','Mar 19 2022',217,''],
+  ["King's Tide",'???','May 28 2022','???',,'']
 ];
 	
 function hiatusRankCheck(){
@@ -167,7 +168,7 @@ function hiatusRankCheck(){
 //makes an HTML table from the array
 function createTable(array) {
 	var diffDays = timer("up", latestRelease, "count");
-	//array[array.length - 1][4] = diffDays + " days and counting"; //comment out when not on hiatus
+	array[array.length - 1][4] = diffDays + " days and counting"; //comment out when not on hiatus
 	for(var i = 0; i < array.length ; i++){
 		var row = document.createElement('tr');
 		row.setAttribute("id", "myTr" + i);
