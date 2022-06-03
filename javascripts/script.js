@@ -1,23 +1,14 @@
 //Automatic episode change
 var episodeList = [
-  ['Elsewhere and Elsewhen','Any Sport in a Storm',new Date("2022-03-26T09:00:00-05:00"),new Date("2022-04-02T09:00:00-05:00")],
-  ['Any Sport in a Storm','Reaching Out',new Date("2022-04-02T09:00:00-05:00"),new Date("2022-04-09T09:00:00-05:00")],
-  ['Reaching Out', "Them's the Breaks, Kid", new Date("2022-04-09T09:00:00-05:00"), new Date("2022-04-16T09:00:00-05:00")],
-  ["Them's the Breaks, Kid", 'Hollow Mind', new Date("2022-04-16T09:00:00-05:00"), new Date("2022-04-23T09:00:00-05:00")],
-  ['Hollow Mind', 'Edge of the World', new Date("2022-04-23T09:00:00-05:00"), new Date("2022-04-30T09:00:00-05:00")],
-  ['Edge of the World', 'Labyrinth Runners', new Date("2022-04-30T09:00:00-05:00"), new Date("2022-05-07T09:00:00-05:00")],
-  ['Labyrinth Runners', 'O Titan, Where Art Thou', new Date("2022-05-07T09:00:00-05:00"), new Date("2022-05-14T09:00:00-05:00")],
-  ['O Titan, Where Art Thou', 'Clouds on the Horizon', new Date("2022-05-14T09:00:00-05:00"), new Date("2022-05-21T09:00:00-05:00")],
-  ['Clouds on the Horizon', "King's Tide", new Date("2022-05-21T09:00:00-05:00"), new Date("2022-05-28T09:00:00-05:00")],
   ["King's Tide", "???", new Date("2022-05-28T09:00:00-05:00")]
 ];
 var startDate = new Date("2022-03-26T09:00:00-05:00");
 var today = Date.now();
 var weeksPassed = Math.floor((today - Date.parse(startDate))/(24*3600*1000*7));
-var latestRelease = episodeList[weeksPassed][2];
-var nextRelease = episodeList[weeksPassed][3];
-document.getElementById("previousEpisode").innerHTML = episodeList[weeksPassed][0];
-document.getElementById("nextEpisode").innerHTML = episodeList[weeksPassed][1]
+var latestRelease = episodeList[0][2]; //Change 0 to weeksPassed when not on hiatus
+var nextRelease = episodeList[0][3]; //Change 0 to weeksPassed when not on hiatus
+document.getElementById("previousEpisode").innerHTML = episodeList[0][0]; //Change first 0 to weeksPassed when not on hiatus
+document.getElementById("nextEpisode").innerHTML = episodeList[0][1] //Change 0 to weeksPassed when not on hiatus
 
 
 var oneDay = 24*60*60*1000;
