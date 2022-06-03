@@ -185,7 +185,7 @@ function createTable(array) {
 //does the ticking
 window.setInterval(function(){
 	timer("up", latestRelease, "count");
-	//timer("down", hiatusRankCheck(), "count2"); //comment out when not on hiatus
+	timer("down", hiatusRankCheck(), "count2"); //comment out when not on hiatus
 	timer("up", lastHiatusMention, "count3");
 	timer("down", nextRelease, "count4"); //Comment out when no new release date
 }, 250);
