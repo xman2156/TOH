@@ -65,6 +65,13 @@
         <a class = "report website" target="_blank" href="https://forms.gle/amwnqCuJJHjYkppz5">Report a bug or ask a question</a>
       </div>
 
+      <div class="alert">
+        <span class="closebtn">&times;</span>
+        <strong>INFO!</strong> I recently started 
+        <a target="_blank" href="https://twitter.com/AnimationHiatus">a Twitter page</a> 
+        to share updates about the sites and new projects.
+      </div>
+
       <div class="count">
         <h1>It has been</h1>
         <h1 style="font-size:600%">
@@ -123,5 +130,13 @@
         </div>
       </div>
     </div>
+    <script>
+      var close = document.getElementsByClassName("closebtn");
+        close[0].onclick = function(){
+          var div = this.parentElement;
+          div.style.opacity = "0";
+          setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+    </script>
   </body>
 </html>
