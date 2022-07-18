@@ -178,7 +178,7 @@ body {
 }
 
 /* alert */
-.alert {
+/* .alert {
   padding: 20px;
   background-color: #34b8da;
   color: white;
@@ -200,7 +200,7 @@ body {
 
 .closebtn:hover {
   color: black;
-}
+} */
 
 .count {
 	position: absolute;

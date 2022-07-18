@@ -1,0 +1,22 @@
+{
+  "short_name": "TOH Hiatus",
+  "name": "The Silence of Luz",
+  "icons": [
+    {
+      "src": "/images/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "https://xman2156.github.io/TOH/",
+  "background_color": "#44285d",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#44285d",
+  "description": "Track the length of The Owl House hiatus"
+}
