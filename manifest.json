@@ -16,7 +16,7 @@
   "start_url": "https://xman2156.github.io/TOH/",
   "background_color": "#44285d",
   "display": "standalone",
-  "scope": "/",
+  "scope": "/TOH/",
   "theme_color": "#44285d",
   "description": "Track the length of The Owl House hiatus"
 }
