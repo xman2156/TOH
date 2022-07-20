@@ -332,7 +332,7 @@ body.info-open #page {
 
 @font-face {
   font-family: Nunito;
-  src: url('../Nunito-Bold.ttf') format('truetype');
+  src: url('/Nunito-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
