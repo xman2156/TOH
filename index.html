@@ -13,6 +13,7 @@
     <script src="javascripts/script.js" defer></script>
     <script src="javascripts/modal.js" defer></script>
     <script src="javascripts/youtube.js" defer></script>
+    <script src="javascripts/navbar.js" defer></script>
     <script src="javascripts/jquery-3.6.0.min.js"></script>
     <script type="module" src="/pwabuilder-sw-register.js"></script>
     <script>
@@ -47,7 +48,7 @@
       </div>
       <button id="infoBtn">i</button>
 
-      <div class="topnav">
+      <div class="topnav" id="myTopnav">
         <a class = "active website" href="https://xman2156.github.io/TOH/">The Owl House</a>
         <a class = "website" href="https://xman2156.github.io/arcane/">Arcane</a>
         <a class = "website" href="https://xman2156.github.io/atla/">ATLA</a>
@@ -64,6 +65,9 @@
             <a href="https://xman2156.github.io/infinitytrain/">Infinity Train</a>
           </div>
         </div>
+        <button id="navBtn" class="icon">
+          <i id="navIcon" class="fa-solid fa-bars"></i>
+        </button>
         <a class = "report website" target="_blank" href="https://forms.gle/amwnqCuJJHjYkppz5">Report a bug or ask a question</a>
       </div>
 
@@ -140,5 +144,6 @@
           setTimeout(function(){ div.style.display = "none"; }, 600);
         }
     </script> -->
+    
   </body>
 </html>
