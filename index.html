@@ -10,12 +10,24 @@
     <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="manifest" href="manifest.json">
+
     <script src="javascripts/script.js" defer></script>
     <script src="javascripts/modal.js" defer></script>
     <script src="javascripts/youtube.js" defer></script>
     <script src="javascripts/navbar.js" defer></script>
-    <script src="javascripts/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="module" src="/pwabuilder-sw-register.js"></script>
+
+    <script>
+      let x = document.cookie;
+      if (x != "") {
+        $('#alert').hide();
+      } 
+      else {
+        $('#alert').show();
+      }
+    </script>
+
     <script>
 	    $(window).on("load", function() {
 	    	$("#loader").fadeOut("slow");;
@@ -71,12 +83,12 @@
         <a class = "report website" target="_blank" href="https://forms.gle/amwnqCuJJHjYkppz5">Report a bug or ask a question</a>
       </div>
 
-      <!-- <div class="alert">
+      <div class="alert" id="alert">
         <span class="closebtn">&times;</span>
         <strong>INFO!</strong> I recently started 
         <a target="_blank" href="https://twitter.com/AnimationHiatus">a Twitter page</a> 
         to share updates about the sites and new projects.
-      </div> -->
+      </div>
 
       <div class="count">
         <h1>It has been</h1>
@@ -136,14 +148,15 @@
         </div>
       </div>
     </div>
-    <!--<script>
+    <script>
       var close = document.getElementsByClassName("closebtn");
         close[0].onclick = function(){
+          document.cookie = "closePopup=true; expires=Thu, 21 Jul 2022 12:00:00 UTC";
           var div = this.parentElement;
           div.style.opacity = "0";
           setTimeout(function(){ div.style.display = "none"; }, 600);
         }
-    </script> -->
+    </script>
     
   </body>
 </html>
