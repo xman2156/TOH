@@ -21,19 +21,20 @@ navigator.serviceWorker.register('/TOH/firebase-messaging-sw.js')
   messaging.useServiceWorker(registration);
 
   messaging
-  .requestPermission()
-messaging.onMessage(payload => {
-  console.log("Message received. ", payload);
-  const { title, ...options } = payload.notification;
-});
+    .requestPermission()
 
-function subscribeTokenToTopic(token, topic) {
-  fetch("https://iid.googleapis.com/iid/v1/" + token + "/rel/topics/" + topic, {
-    method: "POST",
-    headers: new Headers({
-      Authorization: "key=SERVICE KEY"
+  messaging.onMessage(payload => {
+    console.log("Message received. ", payload);
+    const { title, ...options } = payload.notification;
+  });
+
+  function subscribeTokenToTopic(token, topic) {
+    fetch("https://iid.googleapis.com/iid/v1/" + token + "/rel/topics/" + topic, {
+      method: "POST",
+      headers: new Headers({
+        Authorization: "key=SERVICE KEY"
+      })
     })
-  })
     .then(response => {
       if (response.status < 200 || response.status >= 400) {
         throw "Error subscribing to  the following topic: " +
@@ -47,6 +48,6 @@ function subscribeTokenToTopic(token, topic) {
     .catch(error => {
       console.error(error);
     });
-}
+  }
 });
 
