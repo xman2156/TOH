@@ -16,25 +16,25 @@ firebase.initializeApp(config);
 
 const messaging = firebase.messaging();
 
-navigator.serviceWorker.register('/TOH/firebase-messaging-sw.js')
+navigator.serviceWorker.register('firebase-messaging-sw.js')
 .then((registration) => {
   messaging.useServiceWorker(registration);
 
   messaging
-    .requestPermission()
+  .requestPermission()
 
-  messaging.onMessage(payload => {
-    console.log("Message received. ", payload);
-    const { title, ...options } = payload.notification;
-  });
+messaging.onMessage(payload => {
+  console.log("Message received. ", payload);
+  const { title, ...options } = payload.notification;
+});
 
-  function subscribeTokenToTopic(token, topic) {
-    fetch("https://iid.googleapis.com/iid/v1/" + token + "/rel/topics/" + topic, {
-      method: "POST",
-      headers: new Headers({
-        Authorization: "key=SERVICE KEY"
-      })
+function subscribeTokenToTopic(token, topic) {
+  fetch("https://iid.googleapis.com/iid/v1/" + token + "/rel/topics/" + topic, {
+    method: "POST",
+    headers: new Headers({
+      Authorization: "key=SERVICE KEY"
     })
+  })
     .then(response => {
       if (response.status < 200 || response.status >= 400) {
         throw "Error subscribing to  the following topic: " +
@@ -48,6 +48,5 @@ navigator.serviceWorker.register('/TOH/firebase-messaging-sw.js')
     .catch(error => {
       console.error(error);
     });
-  }
+}
 });
-
