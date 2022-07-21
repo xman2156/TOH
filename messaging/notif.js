@@ -22,19 +22,6 @@ navigator.serviceWorker.register('/TOH/firebase-messaging-sw.js')
 
   messaging
   .requestPermission()
-  .then(() => {
-    message.innerHTML = "Notifications allowed";
-    return messaging.getToken();
-  })
-  .then(token => {
-    tokenString.innerHTML = "Token Is : " + token;
-    //subscribeTokenToTopic(token, "allUsers");
-  })
-  .catch(err => {
-    errorMessage.innerHTML = errorMessage.innerHTML + "; " + err;
-    console.log("Unable to get permission to notify", err);
-  });
-
 messaging.onMessage(payload => {
   console.log("Message received. ", payload);
   const { title, ...options } = payload.notification;
