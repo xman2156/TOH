@@ -15,8 +15,10 @@
     <script src="javascripts/modal.js" defer></script>
     <script src="javascripts/youtube.js" defer></script>
     <script src="javascripts/navbar.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="javascripts/cookies.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-messaging.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
     <script type="module" src="/pwabuilder-sw-register.js"></script>
 
@@ -148,6 +150,7 @@
           div.style.opacity = "0";
           setTimeout(function(){ div.style.display = "none"; }, 600);
         };
-    </script> 
+    </script>
+    <script src="/messaging/notif.js"></script>
   </body>
 </html>
