@@ -10,7 +10,7 @@
     <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="manifest" href="manifest.json">
-
+    
     <script src="javascripts/script.js" defer></script>
     <script src="javascripts/modal.js" defer></script>
     <script src="javascripts/youtube.js" defer></script>
@@ -145,12 +145,15 @@
     <script>
       var close = document.getElementsByClassName("closebtn");
         close[0].onclick = function(){
-          document.cookie = "closePopup=true; expires=Thu, 21 Jul 2021 12:00:00 UTC; path=/;";
+          function createCookie() {
+            var date = new Date();
+            date.setTime(date.getTime()+(days*30*24*60*60*1000));
+            document.cookie = "closePopup=true; expires="+date.toGMTString();
+          }
           var div = this.parentElement;
           div.style.opacity = "0";
           setTimeout(function(){ div.style.display = "none"; }, 600);
         };
     </script>
-    <script src="notif.js"></script>
   </body>
 </html>
