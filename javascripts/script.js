@@ -1,6 +1,6 @@
 //Automatic episode change
 var episodeList = [
-  ["King's Tide", 'Thanks to Them', new Date("2022-05-28T09:00:00-05:00"), new Date("2022-10-15T09:00:00-05:00")]
+  ["King's Tide", 'Thanks to Them', new Date("2022-05-28T20:00:00-05:00"), new Date("2022-10-15T09:00:00-05:00")]
 ];
 var startDate = new Date("2022-03-26T09:00:00-05:00");
 var today = Date.now();
