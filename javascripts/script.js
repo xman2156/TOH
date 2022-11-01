@@ -1,8 +1,8 @@
 //Automatic episode change
 var episodeList = [
-  ["King's Tide", 'Thanks to Them', new Date("2022-05-28T09:00:00-05:00"), new Date("2022-10-15T20:00:00-05:00")]
+  ['Thanks to Them', '???', new Date("2022-10-15T20:00:00-05:00")]
 ];
-var startDate = new Date("2022-03-26T09:00:00-05:00");
+var startDate = new Date("2022-10-15T20:00:00-05:00");
 var today = Date.now();
 var weeksPassed = 0; //Math.floor((today - Date.parse(startDate))/(24*3600*1000*7)); //comment out equation when on hiatus
 var latestRelease = episodeList[weeksPassed][2];
@@ -124,7 +124,8 @@ var hiatusList = [
   ['Escape of the Palisman','Sense and Insensitivity','Mar 20 2020','Jul 11 2020',115,''],
   ['Young Blood, Old Souls','Seperate Tides','Aug 29 2020','Jun 12 2021',287,''],
   ["Yesterday's Lie",'Follies at the Coven Day Parade','Aug 14 2021','Mar 19 2022',217,''],
-  ["King's Tide",'Thanks to Them','May 28 2022','Oct 15 2022',,'']
+  ["King's Tide",'Thanks to Them','May 28 2022','Oct 15 2022',140,''],
+  ['Thanks to Them','???','Oct 15 2022','???',,'']
 ];
 
 function hiatusRankCheck(){
