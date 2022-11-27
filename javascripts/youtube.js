@@ -1,4 +1,4 @@
-var youtube = document.getElementById("youtube"); //https://img.youtube.com/vi/enter video link/sddefault.jpg
+var youtube = document.getElementById("youtube"); //https://img.youtube.com/vi/entervideolink/sddefault.jpg
 var source = "images/thumbnail.webp";
 var image = new Image();
 
@@ -11,7 +11,7 @@ youtube.addEventListener( "click", function() {
   var iframe = document.createElement( "iframe" );
 	iframe.setAttribute("frameborder", "0");
 	iframe.setAttribute("allowfullscreen", "");
-	iframe.setAttribute("src", "https://www.youtube.com/embed/qW1ycKYLUuM?autoplay=1");
+	iframe.setAttribute("src", "https://www.youtube.com/embed/dRfTRN1F5Ys?autoplay=1");
   this.innerHTML = "";
 	this.appendChild(iframe);
 });
