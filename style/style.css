@@ -234,11 +234,14 @@ body {
 /* alert */
 .alert {
   padding: 20px;
-  background-color: #34b8da;
+  background-color: #333;
   color: white;
   opacity: 1;
   transition: opacity 0.6s;
   margin-bottom: 15px;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #555;
 }
 
 .closebtn {
