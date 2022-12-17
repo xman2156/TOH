@@ -125,7 +125,7 @@ var hiatusList = [
   ['Young Blood, Old Souls','Seperate Tides','Aug 29 2020','Jun 12 2021',287,''],
   ["Yesterday's Lie",'Follies at the Coven Day Parade','Aug 14 2021','Mar 19 2022',217,''],
   ["King's Tide",'Thanks to Them','May 28 2022','Oct 15 2022',140,''],
-  ['Thanks to Them','For The Future*','Oct 15 2022','Jan 21 2022*',,'*According to The Cable Forum']
+  ['Thanks to Them','For The Future','Oct 15 2022','Jan 21 2022',,'']
 ];
 
 function hiatusRankCheck(){
