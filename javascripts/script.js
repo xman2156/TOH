@@ -126,7 +126,7 @@ var hiatusList = [
   ["Yesterday's Lie",'Follies at the Coven Day Parade','Aug 14 2021','Mar 19 2022',217,''],
   ["King's Tide",'Thanks to Them','May 28 2022','Oct 15 2022',140,''],
   ['Thanks to Them','For The Future','Oct 15 2022','Jan 21 2023',98,''],
-  ['For The Future','Watching and Dreaming*','Jan 21 2023','Apr 8 2023*',,'*RUMOR*']
+  ['For The Future','Watching and Dreaming','Jan 21 2023','Apr 8 2023',,'']
 ];
 
 function hiatusRankCheck(){
