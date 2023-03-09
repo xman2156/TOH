@@ -1,6 +1,6 @@
 //Automatic episode change
 var episodeList = [
-  ['For The Future', '???', new Date("2023-01-21T20:00:00-05:00")]
+  ['For The Future', 'Watching and Dreaming', new Date("2023-01-21T20:00:00-05:00"), new Date("2023-04-08T20:00:00-05:00")]
 ];
 var startDate = new Date("2022-10-15T20:00:00-05:00");
 var today = Date.now();
