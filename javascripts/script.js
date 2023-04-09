@@ -127,7 +127,7 @@ var hiatusList = [
   ["King's Tide",'Thanks to Them','May 28 2022','Oct 15 2022',140,''],
   ['Thanks to Them','For The Future','Oct 15 2022','Jan 21 2023',98,''],
   ['For The Future','Watching and Dreaming','Jan 21 2023','Apr 8 2023',,''],
-  ['Watching and Dreaming',,'Apr 8 2023',,,'The end of The Owl House']
+  ['Watching and Dreaming','','Apr 8 2023','','','The end of The Owl House']
 ];
 
 function hiatusRankCheck(){
