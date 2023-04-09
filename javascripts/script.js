@@ -1,8 +1,8 @@
 //Automatic episode change
 var episodeList = [
-  ['For The Future', 'Watching and Dreaming', new Date("2023-01-21T20:00:00-05:00"), new Date("2023-04-08T20:00:00-05:00")]
+  ['the end of The Owl House', '', new Date("2023-04-08T20:30:00-05:00"),]
 ];
-var startDate = new Date("2022-10-15T20:00:00-05:00");
+var startDate = new Date("2023-04-08T20:30:00-05:00");
 var today = Date.now();
 var weeksPassed = 0; //Math.floor((today - Date.parse(startDate))/(24*3600*1000*7)); //comment out equation when on hiatus
 var latestRelease = episodeList[weeksPassed][2];
@@ -126,7 +126,8 @@ var hiatusList = [
   ["Yesterday's Lie",'Follies at the Coven Day Parade','Aug 14 2021','Mar 19 2022',217,''],
   ["King's Tide",'Thanks to Them','May 28 2022','Oct 15 2022',140,''],
   ['Thanks to Them','For The Future','Oct 15 2022','Jan 21 2023',98,''],
-  ['For The Future','Watching and Dreaming','Jan 21 2023','Apr 8 2023',,'']
+  ['For The Future','Watching and Dreaming','Jan 21 2023','Apr 8 2023',,''],
+  ['Watching and Dreaming',,'Apr 8 2023',,,'The end of The Owl House']
 ];
 
 function hiatusRankCheck(){
