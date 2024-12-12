@@ -3,25 +3,19 @@
     <title>The Silence of Luz - The Owl House Hiatus Tracker</title>
 
     <meta charset="UTF-8">
-    <meta name="description" content="Tracks the length between episodes of the ongoing Disney Channel show,
-    The Owl House, as well as keeping a list of these hiatuses.">
+    <meta name="description" content="Tracks the length since the end of the Disney Channel show,
+    The Owl House, as well as keeping a list of previous hiatuses.">
 
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="manifest" href="manifest.json">
 
     <script src="javascripts/script.js" defer></script>
     <script src="javascripts/modal.js" defer></script>
     <script src="javascripts/youtube.js" defer></script>
     <script src="javascripts/navbar.js" defer></script>
-    <script src="javascripts/cookies.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-messaging.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="javascripts/jquery-3.6.0.min.js"></script>
     
-    <script type="module" src="/pwabuilder-sw-register.js"></script>
-
     <script>
 	    $(window).on("load", function() {
 	    	$("#loader").fadeOut("slow");;
@@ -39,7 +33,7 @@
     </script>
   </head>
 
-  <body onload="createTable(hiatusList); checkCookie();">
+  <body onload="createTable(hiatusList);">
     <div id="loader"></div>
     <div style="display:none;" id="page">
       <div id="info">
@@ -53,13 +47,13 @@
       <button id="infoBtn">i</button>
 
       <div class="topnav" id="myTopnav">
-        <a class = "website" href="https://xman2156.github.io/arcane/">Arcane</a>
         <a class = "website" href="https://xman2156.github.io/atla/">ATLA</a>
         <div class= "active dropdown">
           <button class="dropbtn">The Graveyard
             <i class="fa-solid fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
+          	<a href="https://xman2156.github.io/arcane/">Arcane</a>
             <a class = "active" href="https://xman2156.github.io/TOH/">The Owl House</a>
             <a href="https://xman2156.github.io/amphibia/">Amphibia</a>
             <a href="https://xman2156.github.io/spop/">She-Ra</a>
@@ -89,7 +83,6 @@
 
       <div class="tab">
         <p style="font-size:150%">
-          Note: The Owl House has ended.<br>
           <a onclick=switchMode() id="changeCount"> Click here <span id="moreorless">to count less precisely.</span></a>
         </p>
         <hr class="spacer">
@@ -102,7 +95,7 @@
         </div>
 
         <div class="trailers">
-          <h2>Watch the all of Season 3</h2>
+          <h2>Watch all of Season 3</h2>
           <div id="youtube">
             <div class="play-button"></div>
           </div>
@@ -122,11 +115,6 @@
     <script>
       var close = document.getElementsByClassName("closebtn");
         close[0].onclick = function(){
-          function createCookie() {
-            var date = new Date();
-            date.setTime(date.getTime()+(days*30*24*60*60*1000));
-            document.cookie = "closePopup=true; expires="+date.toGMTString();
-          }
           var div = this.parentElement;
           div.style.opacity = "0";
           setTimeout(function(){ div.style.display = "none"; }, 600);
